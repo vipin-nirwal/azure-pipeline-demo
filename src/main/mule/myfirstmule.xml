@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="myfirstmuleFlow" doc:id="4f9c7607-2cd3-4cc0-be17-1b8649ee135a" >
 		<http:listener doc:name="Listener" doc:id="b5fa0a6c-8565-434a-92d5-ede2200171ba" config-ref="HTTP_Listener_config" path="/status" outputMimeType="application/json" allowedMethods="GET"/>
-		<logger level="INFO" doc:name="Logger" doc:id="0914c7c7-ed9c-4fd8-a92e-0654946944c6" message="This is from calling API"/>
+		<logger level="INFO" doc:name="Logger" doc:id="0914c7c7-ed9c-4fd8-a92e-0654946944c6" message="This is from calling API pushed to git"/>
 		<set-payload value='#[output application/json&#10;---&#10;{&#10;	&#10;	"result":"success"&#10;}]' doc:name="Set Payload" doc:id="3098f11b-0130-4aec-96b0-cd3c1189e88e" mimeType="application/json"/>
 	</flow>
 </mule>
